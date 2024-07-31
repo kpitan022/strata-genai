@@ -12,22 +12,22 @@ from login_idp import validar_usuario
 
 
 path_log = os.path.join(os.path.dirname(os.path.abspath(__file__)), "app.log")
-filehandler = RotatingFileHandler(path_log, maxBytes=100000, backupCount=5)
-filehandler.setLevel(logging.INFO)
-# filehandler.setLevel(logging.ERROR)
-formatter = logging.Formatter(
-    "%(asctime)s - %(name)s - %(levelname)s - %(message)s", datefmt="%Y-%m-%d %H:%M:%S"
-)
-logging.basicConfig(
-    level=logging.INFO,
-    # level=logging.ERROR,
-    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-    handlers=[
-        logging.FileHandler(path_log),
-        logging.StreamHandler(),
-    ],
-    datefmt="%Y-%m-%d %H:%M:%S",
-)
+# filehandler = RotatingFileHandler(path_log, maxBytes=100000, backupCount=5)
+# filehandler.setLevel(logging.INFO)
+# # filehandler.setLevel(logging.ERROR)
+# formatter = logging.Formatter(
+#     "%(asctime)s - %(name)s - %(levelname)s - %(message)s", datefmt="%Y-%m-%d %H:%M:%S"
+# )
+# logging.basicConfig(
+#     level=logging.INFO,
+#     # level=logging.ERROR,
+#     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+#     handlers=[
+#         logging.FileHandler(path_log),
+#         logging.StreamHandler(),
+#     ],
+#     datefmt="%Y-%m-%d %H:%M:%S",
+# )
 # logging.getLogger("flet_core").setLevel(logging.DEBUG)
 
 # from test_requests import peticion_a_vertex
@@ -831,17 +831,28 @@ def main(page: ft.Page):
 #     route_url_strategy="path",
 # )
 
-if __name__ == "__main__":
-    flet_path = os.getenv("FLET_PATH", DEFAULT_FLET_PATH)
-    flet_port = int(os.getenv("FLET_PORT", DEFAULT_FLET_PORT))
-    ft.app(
-        name=flet_path,
-        target=main,
-        view=None,
-        # view=ft.WEB_BROWSER,
-        port=flet_port,
-        route_url_strategy="path",
-        use_color_emoji=True,
-        web_renderer=ft.WebRenderer.CANVAS_KIT,
-        assets_dir="assets",
-    )
+# if __name__ == "__main__":
+#     flet_path = os.getenv("FLET_PATH", DEFAULT_FLET_PATH)
+#     # flet_port = int(os.getenv("FLET_PORT", DEFAULT_FLET_PORT))
+#     ft.app(
+#         name=flet_path,
+#         target=main,
+#         view=None,
+#         # view=ft.WEB_BROWSER,
+#         # port=flet_port,
+#         route_url_strategy="path",
+#         use_color_emoji=True,
+#         web_renderer=ft.WebRenderer.CANVAS_KIT,
+#         assets_dir="assets",
+#     )
+ft.app(
+    name="StrataGenAI",
+    target=main,
+    # view=None,
+    view=ft.AppView.FLET_APP,
+    # port=flet_port,
+    route_url_strategy="path",
+    use_color_emoji=True,
+    web_renderer=ft.WebRenderer.CANVAS_KIT,
+    assets_dir="assets",
+)
