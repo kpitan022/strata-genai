@@ -14,7 +14,7 @@ install:
   - pip install -r requirements.txt
 
 build_script:
-  - flet pack main.py --name StrataGenAi --icon icon.png --product-name StrataGenAi --product-version "1.2.3" --copyright "Copyright (c) 2022 Strata Analytics."
+  - flet pack main.py --name StrataGenAi --icon icon.png --product-name StrataGenAi --product-version "1.2.3" --copyright "Copyright (c) 2022 YourCompany Inc."
 
 test: off
 
@@ -34,10 +34,10 @@ for:
         - image: Visual Studio 2019
 
     after_build:
-      - 7z a counter-windows.zip %CD%\dist\*.exe
+      - 7z a StrataGenAi-windows.zip %CD%\dist\*.exe
 
     artifacts:
-      - path: counter-windows.zip
+      - path: StrataGenAi-windows.zip
 
   #
   #   macOS package
@@ -47,10 +47,10 @@ for:
         - image: macOS
 
     after_build:
-      - tar -czvf counter-macos.tar.gz -C dist counter.app
+      - tar -czvf StrataGenAi-macos.tar.gz -C dist StrataGenAi.app
 
     artifacts:
-      - path: counter-macos.tar.gz
+      - path: StrataGenAi-macos.tar.gz
 
   #
   #   Linux package
@@ -60,7 +60,7 @@ for:
         - image: Ubuntu
 
     after_build:
-      - tar -czvf counter-linux.tar.gz -C dist counter
+      - tar -czvf StrataGenAi-linux.tar.gz -C dist StrataGenAi
 
     artifacts:
-      - path: counter-linux.tar.gz
+      - path: StrataGenAi-linux.tar.gz
