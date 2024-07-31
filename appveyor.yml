@@ -1,7 +1,7 @@
 image:
+  - Ubuntu
   - Visual Studio 2019
   - macOS
-  - Ubuntu
 
 skip_branch_with_pr: true
 stack: python 3.10
@@ -14,7 +14,7 @@ install:
   - pip install -r requirements.txt
 
 build_script:
-  - flet pack main.py --name StrataGenAi --icon icon.png --product-name StrataGenAi --product-version "1.2.3" --copyright "Copyright (c) 2022 YourCompany Inc." --add-data "assets;assets"
+  - flet pack main.py --name StrataGenAi --icon icon.png --product-name StrataGenAi --product-version "1.2.3" --copyright "Copyright (c) 2022 YourCompany Inc." --add-data "assets:assets"
 
 test: off
 
