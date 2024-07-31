@@ -1,0 +1,37 @@
+{
+    "name": "StrataGenAI",
+    "short_name": "StrataGenAI",
+    "lang": "es",
+    "title": "StrataGenAI",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#3f3f3f",
+    "theme_color": "#3f3f3f",
+    "description": "Interfaz de usuario para para la traducción de código fuente utilizando modelos de lenguaje generativos. Realizado por el equipo de Strata-Analytics",
+    "orientation": "natural",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "icons/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/icon-maskable-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/icon-maskable-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}

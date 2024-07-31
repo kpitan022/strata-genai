@@ -1,0 +1,13 @@
+[Unit]
+Description=Flet Server
+After=network.target
+
+[Service]
+User=francopaolo_rossi
+Group=google-sudoers
+WorkingDirectory=/home/francopaolo_rossi/StrataGenAI
+Environment="PATH=/home/francopaolo_rossi/StrataGenAI/.venv/bin"
+ExecStart=/home/francopaolo_rossi/StrataGenAI/.venv/bin/python /home/francopaolo_rossi/StrataGenAI/main.py
+
+[Install]
+WantedBy=multi-user.target

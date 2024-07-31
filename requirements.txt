@@ -1,0 +1,5 @@
+flet==0.23.1
+python-dotenv==1.0.0
+requests==2.31.0
+google-cloud-aiplatform==1.48.0
+oauth2client==4.1.3
